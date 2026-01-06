@@ -1,13 +1,13 @@
-# Practica_Bases_Datos_Hospital
+# Ejercicio Final: Caso Integrador
 
-**Integrantes:** 
-González Hernández Judith,  
-Magaña Fierro Elka Natalia
+**Integrantes:**
+* González Hernández Judith
+* Magaña Fierro Elka Natalia
 
-**Introducción:** 
-Este proyecto implementa un sistema integral de gestión hospitalaria diseñado para administrar la interacción entre pacientes, personal médico, departamentos y tratamientos. El esquema permite realizar un seguimiento detallado desde la asignación de médicos a departamentos hasta la prescripción de medicamentos tras una consulta.
+## Introducción
+Este proyecto implementa un sistema integral de gestión hospitalaria diseñado para administrar la interacción entre pacientes, personal médico, departamentos y tratamientos. El esquema permite realizar un seguimiento detallado desde la asignación de médicos a departamentos hasta la prescripción de medicamentos tras una consulta, fundamentado en los conceptos de **Completitud Relacional** y **Seguridad de Expresiones**.
 
-2. Modelo Relacional
+## Modelo Relacional
 El esquema consta de 8 relaciones interconectadas con más de 100 tuplas para garantizar la integridad y complejidad de las consultas.
 
 
@@ -96,7 +96,10 @@ Ejecutar script:
 docker exec -it practica_db psql -U postgres -f /hospital.sql
 
 
-Nota sobre Seguridad: Todas las consultas de cálculo relacional (CRT/CRD) presentadas han sido diseñadas como expresiones seguras, garantizando resultados finitos al restringir las variables de tupla y dominio a los dominios activos de las relaciones del hospital.
+##  Seguridad y Verificación
+
+> [!IMPORTANT]
+> **Nota sobre Seguridad de Expresiones:** > Todas las consultas de Cálculo Relacional de Tuplas (CRT) y Cálculo Relacional de Dominios (CRD) presentadas en este proyecto han sido diseñadas bajo el criterio de **Expresiones Seguras**. Esto garantiza que cada consulta produzca un resultado finito y dependiente únicamente de los dominios activos presentes en las relaciones del sistema hospitalario, evitando así resultados infinitos o indeterminados.
 
 ## Verificación de Carga
 Para verificar que las 100+ tuplas se cargaron correctamente, ejecute:
